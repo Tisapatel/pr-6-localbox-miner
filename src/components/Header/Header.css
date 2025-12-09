@@ -1,0 +1,93 @@
+.header {
+  height: 70px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGO */
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.logoBox img {
+  width: 65px;
+  height: auto;
+}
+
+.logoBox h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin-left: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #222;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff7a2d;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+.nav a:hover {
+  color: #ff7a2d;
+}
+
+/* SEARCH BOX */
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 8px 16px;
+  border: 1px solid #504d4d;
+  border-radius: 20px;
+  outline: none;
+  width: 250px;
+  color: #222;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+/* PLACEHOLDER TEXT */
+.search-box input::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.search-box input:focus {
+  border-color: #ff7a2d;
+  box-shadow: 0 0 8px rgba(255, 122, 45, 0.2);
+}
